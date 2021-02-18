@@ -32,7 +32,7 @@ jobs:
         with:
           cmd: install
 
-      - name: Building Projects
+      - name: expense-tacker-app
         run: |
           yarn build
           cd build
@@ -42,4 +42,4 @@ jobs:
         run: npm install -g surge
 
       - name: Deploy To Surge
-        run: surge ./build shehzad-expense-tracker-app-bootcamp.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./build shehzad-expense-tracker-app-bootcamp.surge.sh --token ${{secrets.SURGE_TOKEN}}
