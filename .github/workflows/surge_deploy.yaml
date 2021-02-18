@@ -34,7 +34,7 @@ jobs:
 
       - name: expense-tacker-app
         run: |
-          yarn build
+          npm run build
           cd build
           cp index.html 200.html
       # Runs a set of commands using the runners shell
