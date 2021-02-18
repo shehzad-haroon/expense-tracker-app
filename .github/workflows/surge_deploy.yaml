@@ -26,19 +26,9 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: 12
-
-      - name: Installing Yarn
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install
-
-      - name: expense-tacker-app
-        run: |
-          cd expense-tacker-app
-          npm run build
       # Runs a set of commands using the runners shell
-      - name: Installing Surge To Deploy
-        run: npm install -g surge
+      - name: Installing surge
+        run: npm install --global surge
 
       - name: Deploy To Surge
         run: surge ./build shehzad-expense-tracker-app-bootcamp.surge.sh --token ${{secrets.SURGE_TOKEN}}
