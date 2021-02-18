@@ -1,10 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
 
+import React from 'react'
+import Header from './Components/Header'
+import HistorynTransaction from './Components/HistorynTransaction'
+import IncomenExpenses from './Components/IncomenExpenses'
 function App() {
   return (
     <div className="App">
-     <h1>new Changes </h1>
+    <Header/>
+    <IncomenExpenses/>
+    <HistorynTransaction/>
     </div>
   );
 }
