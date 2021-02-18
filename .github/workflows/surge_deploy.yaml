@@ -34,9 +34,8 @@ jobs:
 
       - name: expense-tacker-app
         run: |
+          cd expense-tacker-app
           npm run build
-          cd build
-          cp index.html 200.html
       # Runs a set of commands using the runners shell
       - name: Installing Surge To Deploy
         run: npm install -g surge
